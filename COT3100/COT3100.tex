@@ -141,11 +141,78 @@
                 \end{itemize}
               \end{itemize}
             \item \textit{Binary} operators take 2 operands (e.g. 3 x 4).
+              \begin{itemize}
+                \item The Conjunction Operator
+                  \begin{itemize}
+                    \item The \textit{conjunction operator} ``$\wedge$'' (AND)
+                    combines two propositions to form their logical \textit{conjunction}.
+                    \item e.g. If p = ``I will have salad for lunch.'' and
+                    q = ``I will have steak for dinner.'', then p $\wedge$ q =
+                    ``I will have salad for lunch and I will have steak for dinner.''
+                    \\
+                    \\
+                    \begin{tabular}{cc|ccc}
+                      p & q & p  $\wedge$  q \\
+                      \hline
+                      T & T & T  \\
+                      T & F & F  \\
+                      F & T & F  \\
+                      F & F & F
+                    \end{tabular}
+                    \item Note that a conjunction table will have 2$^n$ rows.
+                    \item $\neg$ and $\wedge$ operations together are universal.
+                    i.e., sufficient to express any truth table.
+                  \end{itemize}
+                  \item The Disjunction Operator
+                    \begin{itemize}
+                      \item The binary \textit{disjunction oeprator} ``$\vee$'' (OR)
+                      combines two propositions to form their logical \textit{disjunction}.
+                       \\
+                       \\
+                      e.g. p = ``That car has a bad engine.''
+                        \\
+                        q = ``That car has a bad carburetor.''
+                        \\
+                        p $\vee$ q = ``Either that car has a bad engine, or
+                        that car has a bad carburetor.''
+                        \\
+                        \\
+                        \begin{tabular}{cc|ccc}
+                          p & q & p  $\vee$  q \\
+                          \hline
+                          T & T & T  \\
+                          T & F & T  \\
+                          F & T & T  \\
+                          F & F & F
+                        \end{tabular}
+                        \item p $\vee$ q means that p is true, or q is true,
+                        or both are true.
+                        \item This is a \textit{inclusive or}, because it includes
+                        the possibility tht both p and q are true.
+                        \item ``$\neg$'' and ``$\vee$'' together are also universal
+                      \end{itemize}
+                  \item The \textit{Exclusive Or} Operator
+                    \begin{itemize}
+                      \item The binary \textit{exclusive-or operator} ``$\oplus$'' (XOR)
+                      combines two propositions to form their logical ``exlusive or'' (exjunction?)
+                      \\
+                      p = ``I will earn an A in this course,''
+                      \\
+                      q = ``I will drop this course,''
+                      \\
+                      p $\oplus$ q = ``I will either earn an A for this course,
+                      or I will drop it (but not both!)''
+
+                      \item p $\oplus$ q means p is true, or q is true, but \textbf{not both!}
+                      \item This is called \textit{exclusive or} because it
+                      \textbf{excludes} the possibility that both p and q are true.
+                      \item $\neg$ and $\oplus$ together are not universal.
+
+                \end{itemize}
+              \end{itemize}
             \item \textit{Propositional or Boolean} operators operate on
             propositions or truth values instead of on numbers.
           \end{itemize}
-
-
     \end{addmargin}
 
 
