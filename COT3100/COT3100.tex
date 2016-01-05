@@ -4,7 +4,8 @@
 \usepackage{qtree}
 \usepackage{flagderiv}
 \usepackage{pdfpages}
-
+\usepackage{scrextend}
+\usepackage{mdframed}
 
 % Uncomment these for a different family of fonts
 % \usepackage{cmbright}
@@ -34,8 +35,6 @@
 
 {\large{\noun{\thiscoursename}}}\\ \vspace{0.1in}
 
-
-
   {\noun \thisprof} \ $\bullet$ \ {\noun \thisterm} \ $\bullet$ \ {\noun {University of Florida}} \\
 
   \end{center}
@@ -44,45 +43,116 @@
 
 % Begin Document
 \begin{document}
-
+\setcounter{secnumdepth}{3}
   % Notes front
   \notefront
   % Table of Contents and List of Figures
   \tocandfigures
   % Abstract
   \doabstract{These notes are intended as a resource for myself; past, present, or future students of this course, and anyone interested in the material. The goal is to provide an end-to-end resource that covers all material discussed in the course displayed in an organized manner. If you spot any errors or would like to contribute, please contact me directly.}
-
+\setcounter{secnumdepth}{3}
 \section{Foundations of Logic: Overview}
 
 
-
+\begin{addmargin}[1em]{2em} % 1em left, 2em right
   \begin{itemize}
-    \item Propositional Logic
-	  \begin{itemize}
-		\item Basic Definitions
-		\item Equivalence Rules \& Derivations
-	  \end{itemize}
-    \item Predicate Logic
-	  \begin{itemize}
-		\item Predicates
-		\item Quantified Predicate Expressions
-		\item Equivalences \& Derivations
-	  \end{itemize}
+      \item Propositional Logic
+  	  \begin{itemize}
+  		\item Basic Definitions
+  		\item Equivalence Rules \& Derivations
+  	  \end{itemize}
+      \item Predicate Logic
+  	  \begin{itemize}
+  		\item Predicates
+  		\item Quantified Predicate Expressions
+  		\item Equivalences \& Derivations
+  	  \end{itemize}
   \end{itemize}
-
+\end{addmargin}
 
 \subsection{Propositional Logic}
-	\begin{defn}[Propositional Logic]\label{Propositional Logic}
-		The logic of compound statements built from simpler statements using \textit{Boolean Connectives}
-	\end{defn}
+\begin{addmargin}[1em]{2em} % 1em left, 2em right
+    \begin{mdframed}
+    	\begin{defn}[Propositional Logic]\label{Propositional Logic}
+    		The logic of compound statements built from simpler statements using \textit{Boolean Connectives}.
+    	\end{defn}
+    \end{mdframed}
+    \medskip
+    Applications:
+    \begin{itemize}
+      \item Design of digital electronic circuits
+      \item Expressing conditions in computer programs
+      \item Queries to databses \& search engines
+    \end{itemize}
+\end{addmargin}
+\begin{addmargin}[2em]{2em}
+  \subsubsection{Basic Definitions}
+    \begin{addmargin}[1em]{2em} % 1em left, 2em right
+        \begin{mdframed}
+        	\begin{defn}[Proposition]\label{Propositional}
+        		A \textbf{\textit{proposition (p, q, r, ...)}} is simply a \textit{statement i.e. a declarative sentence) with a definite meaning}, having
+        		a \textit{truth value} that's either \textit{true} or \textit{false} (never both, neither, or somewhere in between).
+          \end{defn}
+        \end{mdframed}
 
-\subsubsection{Basic Definitions}
-	\begin{defn}[Propositional Logic]\label{Propositional Logic}
-		A \textbf{\textit{proposition (p, q, r, ...)}} is simply a \textit{statement i.e. a declarative sentence) with a definite meaning}, having
-		a \textit{truth value} that's either \textit{true} or \textit{false} (never both, neither, or somewhere in between)
-	\end{defn}
+        \medskip
 
-\subsubsection{Equivalence Rules \& Derivations}
+        In \textit{probability theory}, we assign \textit{degrees of certainty} to propositions. For now we will
+        just use True/False.
+
+        \paragraph{Examples of Propositions}
+          \begin{itemize}
+            \item ``It is raining.''
+          \end{itemize}
+          \medskip
+          Not propositions:
+          \begin{itemize}
+            \item ``Who's there?'' (interrogative, question)
+          \end{itemize}
+
+          \paragraph{Boolean Operators}
+          \begin{itemize}
+            \item Negation (NOT)
+            \item Conjunction (AND)
+            \item Disjunction (OR)
+            \item Exclusive-Or (XOR)
+            \item Implication (IF)
+            \item Bi-conditional (IFF)
+          \end{itemize}
+
+          \paragraph{Operators \& Connectives}
+          \begin{itemize}
+            \item An \textit{operator} or \textit{connective} combines one or
+            more \textit{operand} expressions into a larger expression
+            (e.g. ``+'' in numeric expressions).
+            \item \textit{Unary} operators take 1 operand (e.g. -3).
+              \begin{itemize}
+                \item The unary \textit{negation operator} ``\( \neg \)''
+                (NOT) transforms a proposition into its logical \textit{negation}
+                \begin{itemize}
+                  \item Example: If p = ``I have brown hair.'', then
+                  \( \neg \) p = ``I do not have brown hair.''
+                    \begin{tabular}{c|cc}
+                      p & $\neg$ p \\
+                      \hline
+                      T & F \\
+                      F & T
+                    \end{tabular}
+                \end{itemize}
+              \end{itemize}
+            \item \textit{Binary} operators take 2 operands (e.g. 3 x 4).
+            \item \textit{Propositional or Boolean} operators operate on
+            propositions or truth values instead of on numbers.
+          \end{itemize}
+
+
+    \end{addmargin}
+
+
+  \subsubsection{Equivalence Rules \& Derivations}
+
+
+\end{addmargin}
 \subsection{Predicate Logic}
 \subsubsection{Predicates}
 \subsubsection{Quantified Predicate Expressions}
@@ -97,7 +167,7 @@
       %& = 1 + 1 + 1
   %\end{align*}
 
- 
+
 
   %The \nameref{addition} rule is very good.
 
@@ -107,5 +177,5 @@
 
   %\tc{this is code}
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \end{document}
