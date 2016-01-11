@@ -18,6 +18,8 @@
 \newcommand{\thisterm}{Spring 2016}
 \newcommand{\website}{clandry94.github.io}
 
+
+
 % Headers
 \chead{\thiscoursename \ Course Notes}
 \lhead{\thisterm}
@@ -217,21 +219,22 @@
 
   \paragraph{Operators \& Connectives (Conditional Statments)}
     \begin{itemize}
-      \item The \textit{implication} Operator
+      \item The \textit{Implication} Operator
+
 
         \begin{itemize}
-          \item Implication p $\implies$ q states that p implies q.
+          \item Implication p $\to$ q states that p implies q.
           \item p is the hypothesis (antecedent or premise)
           \item q is the conclusion (consequence)
           \item It is \textbf{false} only in the case that p is \textbf{true}, but q is \textbf{false}
           \item e.g. p = ``I am elected.'' and q = ``Taxes will be lowered.''
           \\
-          p $\implies$ q = ``If I am elected, then taxes will be lowered''
+          p $\to$ q = ``If I am elected, then taxes will be lowered''
           \item Implication Truth Table
           \\
           \\
           \begin{tabular}{cc|ccc}
-            p & q & p  $\implies$  q \\
+            p & q & p  $\to$  q \\
             \hline
             T & T & T  \\
             T & F & F  \\
@@ -241,10 +244,44 @@
 
         \end{itemize}
 
+        \item The \textit{biconditional} Operator
+          \begin{itemize}
+            \item Biconditional p $\to$ q states that p is true ``if and only if'' q is true
+            \item p $\to$ q $\wedge$ q $\to$ p
+            \item This is the opposite of $\oplus$
+            \item p $\iff$ q means \(\neg(p \oplus q)\)
+            \item e.g. p = ``Taxes will be lowered.'' and q = ``If I am elected.''
+            \\
+            p $\iff$ q = ``Taxes will be lowered if and only if I am elected''
+            \item Implication Truth Table
+            \\
+            \\
+            \begin{tabular}{cc|ccc}
+              p & q & p  $\to$  q \\
+              \hline
+              T & T & T  \\
+              T & F & F  \\
+              F & T & F  \\
+              F & F & T
+            \end{tabular}
+
+          \end{itemize}
+
     \end{itemize}
 
-  \subsubsection{Equivalence Rules \& Derivations}
+    \paragraph{Inverse, Converse, \& Contrapositive}
 
+    Intial: p $\to$ q
+      \begin{itemize}
+        \item Inverse:
+         \(\neg p \to \neg q\)
+        \item Converse:
+         \(q \to p \)
+        \item Contrapositive
+        \( \neg q \to \neg p\)
+      \end{itemize}
+
+  \subsubsection{Equivalence Rules \& Derivations}
 
 \end{addmargin}
 \subsection{Predicate Logic}
